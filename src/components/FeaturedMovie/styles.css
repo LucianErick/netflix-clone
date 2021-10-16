@@ -1,0 +1,118 @@
+.featured {
+  height: 100vh;
+}
+
+.featured--vertical {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.featured--horizontal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px 0 100px 30px;
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to right, #111 30%, transparent 90%);
+}
+
+.featured--name {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.featured--info {
+  font-size: 0.75rem;
+  margin-top: 0.65rem;
+  font-weight: bold;
+}
+
+.featured--point {
+  color: #46d369;
+}
+
+.featured--point,
+.featured--year,
+.featured--seasons {
+  display: inline-block;
+  margin-right: 0.65rem;
+}
+
+.featured--description {
+  margin: 1.5rem 0 1.5rem 0;
+  font-size: 0.8rem;
+  color: #999;
+  max-width: calc(max(40%, 275px));
+  max-height: 40%;
+  overflow-y: scroll;
+  font-weight: 500;
+  padding-right: 0.2rem;
+}
+
+.featured--description::-webkit-scrollbar {
+  width: 2px;
+}
+
+.featured--description::-webkit-scrollbar-track {
+  background: #333;
+}
+
+.featured--description::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 3px solid #ccc;
+}
+
+.featured--genres {
+  margin-top: 1.5rem;
+}
+
+.featured--buttons {
+  display: flex;
+  max-width: 100%;
+  align-items: left;
+}
+
+.featured--buttons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px !important;
+  height: 35px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  letter-spacing: 0.075em;
+  transition: all ease .25s;
+}
+
+.featured--buttons a:hover {
+  opacity: 0.8;
+}
+
+.featured--buttons a span {
+  font-size: 0.9rem;
+  margin-right: 0.35em;
+}
+
+.featured--buttons a:first-child {
+  background-color: #FFFF;
+  color: #000;
+  margin-right: 0.4rem;
+}
+
+.featured--buttons a:last-child {
+  background-color: #333;
+  color: #FFF;
+}
+
+.featured--genres {
+  font: 0.55rem;
+  font-weight: 500;
+  color: #999;
+}
+
+.featured--genres strong {
+  margin-right: 0.35rem;
+}
+

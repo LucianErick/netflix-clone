@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #111;
+  color: #FFF;
+  font-size: 24px;
+  font-family: "Netflix Sans Regular";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@font-face {
+  font-family: 'Netflix Sans Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Netflix Sans Regular'), url('./fonts/NetflixSansRegular.woff') format('woff');
   }
-}
+  
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @font-face {
+  font-family: 'Netflix Sans Icon';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Netflix Sans Icon'), url('./fonts/NetflixSansIcon.woff') format('woff');
   }
-  to {
-    transform: rotate(360deg);
+  
+
+  @font-face {
+  font-family: 'Netflix Sans Thin';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Netflix Sans Thin'), url('./fonts/NetflixSansThin.woff') format('woff');
   }
-}
+  
+
+  @font-face {
+  font-family: 'Netflix Sans Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Netflix Sans Light'), url('./fonts/NetflixSansLight.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Netflix Sans Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Netflix Sans Medium'), url('./fonts/NetflixSansMedium.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Netflix Sans Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Netflix Sans Bold'), url('./fonts/NetflixSansBold.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Netflix Sans Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Netflix Sans Black'), url('./fonts/NetflixSansBlack.woff') format('woff');
+  }
+
+  .lists {
+    margin-top: -120px;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #333;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: blue;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #ccc;  /* creates padding around scroll thumb */
+  }

@@ -1,0 +1,36 @@
+.movie-row {
+    margin-bottom: 1.75rem;
+}
+
+.movie-row h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    margin: 0 0 1rem 1.25rem;
+}
+
+.movie-row--listarea {
+    overflow-x: hidden;
+    padding-left: 1.25rem;
+}
+
+.movie-row--item {
+    display: inline-block;
+    width: 150px;
+    height: 220px;
+    cursor: pointer;
+}
+
+.movie-row--list {
+    width: 1000%;
+}
+
+.movie-row--item img {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.25s;
+}
+
+.movie-row--item img:hover {
+    transform: scale(1);
+}
