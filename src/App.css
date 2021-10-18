@@ -84,3 +84,17 @@ body {
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 3px solid #ccc;  /* creates padding around scroll thumb */
   }
+
+  .loading {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }

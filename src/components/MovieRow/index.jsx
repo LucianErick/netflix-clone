@@ -1,11 +1,43 @@
 import "./styles.css";
+import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
+import NavigateNextIcon from "@material-ui/icons/NavigateNext";
+import { useState } from "react";
 
 export const MovieRow = ({ title, items }) => {
+  
+  const [scrollX, setScrollX] = useState(-400);
+  
+  const handlePreviousPage = () => {
+    let x = scrollX + Math.round(window.innerWidth / 2);
+    if (x > 0) {
+      x = 0;
+    }
+    setScrollX(x);
+  };
+
+  const handleNextPage = () => {
+    let x = scrollX - Math.round(window.innerWidth / 2);
+    let totalWidth = items.results.length * 150;
+    if (window.innerWidth - totalWidth > x) {
+      x = window.innerWidth - totalWidth - 50
+    }
+    setScrollX(x);
+  };
+
   return (
     <div className="movie-row">
       <h2>{title}</h2>
+      <div className="movie-row--left" onClick={handlePreviousPage}>
+        <NavigateBeforeIcon style={{ fontSize: 50 }} />
+      </div>
+      <div className="movie-row--right">
+        <NavigateNextIcon style={{ fontSize: 50 }} onClick={handleNextPage} />
+      </div>
       <div className="movie-row--listarea">
-        <div className="movie-row--list">
+        <div className="movie-row--list" style={{ 
+          marginLeft: scrollX,
+          width: items.results.length * 150
+        }}>
           {items.results.length > 0 &&
             items.results.map((item, key) => {
               return (

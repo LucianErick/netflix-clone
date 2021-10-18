@@ -116,3 +116,27 @@
   margin-right: 0.35rem;
 }
 
+@media (max-width: 768px) {
+  .featured {
+    height: 90vh;
+  }
+
+  .featured--name {
+    font-size: 1.4rem
+  }
+
+  .featured--info, .featured--genres {
+    font-size: 0.65rem;
+  }
+
+  .featured--description {
+    font-size: 0.65rem;
+    max-width: 100%;
+    margin-right: 30px;
+  }
+
+  .featured--buttons a {
+    font-size: 0.65rem;
+    width: 100px !important;
+  }
+}

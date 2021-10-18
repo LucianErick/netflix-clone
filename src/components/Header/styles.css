@@ -11,10 +11,11 @@ header {
     justify-content: space-between;
     align-items: center;
     background: transparent;
+    transition: all ease 0.25s;
 }
 
-header .black {
-    background-color: #141414;
+.black {
+    background-color: #000;
 }
 
 .header--logo {

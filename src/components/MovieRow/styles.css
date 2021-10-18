@@ -1,36 +1,75 @@
 .movie-row {
-    margin-bottom: 1.75rem;
+  margin-bottom: 1.75rem;
 }
 
 .movie-row h2 {
-    font-size: 1.5rem;
-    letter-spacing: 0.05em;
-    margin: 0 0 1rem 1.25rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  margin: 0 0 1rem 1.25rem;
 }
 
 .movie-row--listarea {
-    overflow-x: hidden;
-    padding-left: 1.25rem;
+  overflow-x: hidden;
+  padding-left: 1.25rem;
 }
 
 .movie-row--item {
-    display: inline-block;
-    width: 150px;
-    height: 220px;
-    cursor: pointer;
+  display: inline-block;
+  width: 150px;
+  height: 220px;
+  cursor: pointer;
 }
 
 .movie-row--list {
-    width: 1000%;
+  transition: all ease 0.4s;
 }
 
 .movie-row--item img {
-    width: 100%;
-    height: 100%;
-    transform: scale(0.9);
-    transition: all ease 0.25s;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.9);
+  transition: all ease 0.25s;
 }
 
 .movie-row--item img:hover {
-    transform: scale(1);
+  transform: scale(1);
+}
+
+.movie-row--left,
+.movie-row--right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 40px;
+  height: 220px;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.400);
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: all ease 0.35s;
+}
+
+.movie-row--left {
+  left: -5px;
+}
+
+.movie-row--right {
+  right: 0;
+}
+
+.movie-row:hover .movie-row--left {
+    opacity: 1;
+}
+
+.movie-row:hover .movie-row--right {
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .movie-row--left,
+    .movie-row--right {
+        opacity: 1
+    }
 }
