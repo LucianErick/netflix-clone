@@ -1,7 +1,7 @@
 ### Clone da UI da página inicial da Netflix
 
 - Esse projetinho tem o único intuito de treinar alguns conceitos interessantes de React
-- Para pegar os dados utilizei da API do The Moviefilm DataBase
+- Para pegar os dados utilizei da API do [The Movie DataBase](https://developers.themoviedb.org/3)
 
 ### Como executar?
 
