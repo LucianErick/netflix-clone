@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const api = axios.create({
   baseURL: "https://api.themoviedb.org/3/",
+  limit: 50,
 });
 
 const API_KEY = "2edee3efc74ce0f559038510ea696fcd";
@@ -50,7 +51,7 @@ export const getHomeList = async () => {
       slug: "toprated",
       title: "Em Alta",
       items: await basicRequest(
-        `/movie/top_rated?${LANGUAGE}&api_key=${API_KEY}`
+        `/movie/top_rated?${LANGUAGE}&api_key=${API_KEY}&page=3`
       ),
     },
     {

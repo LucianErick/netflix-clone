@@ -11,7 +11,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background: transparent;
-    transition: all ease 0.25s;
+    transition: all ease 0.4s;
 }
 
 .black {

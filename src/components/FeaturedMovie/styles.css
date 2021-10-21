@@ -78,7 +78,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 140px !important;
+  width: 140px;
   height: 35px;
   border-radius: 4px;
   font-size: 0.8rem;
@@ -104,6 +104,12 @@
 .featured--buttons a:last-child {
   background-color: #333;
   color: #FFF;
+  width: 160px !important;
+}
+
+#featured--add-button {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
 }
 
 .featured--genres {
@@ -140,3 +146,4 @@
     width: 100px !important;
   }
 }
+
