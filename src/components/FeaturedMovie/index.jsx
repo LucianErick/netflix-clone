@@ -4,7 +4,7 @@ import "./styles.css";
 
 export const FeaturedMovie = ({ item }) => {
   const { favorites, setFavorites } = useFavorites();
-  const [inList, setInList] = useState(false); 
+  const [inList, setInList] = useState(false);
 
   let releaseDate = new Date(item.first_air_date);
   let genres = [];
@@ -14,17 +14,46 @@ export const FeaturedMovie = ({ item }) => {
 
   const handleAddFavorite = (data) => {
     let aux = favorites;
-    if (!aux.includes(data)) {
+    if (isAlreadyInMemo(data)) {
+      const filtered = aux.filter((item) => {
+        return data.id !== item.id;
+      });
+      setFavorites(filtered);
+      setInList(false);
+      alert("Removido com sucesso!");
+    } else {
       aux.push(data);
       setFavorites(aux);
       setInList(true);
+      alert("Adicionado com sucesso!");
+    }
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  };
+
+  const isAlreadyInMemo = (data) => {
+    const reference = JSON.parse(localStorage.getItem("favorites"));
+
+    if (!reference) {
+      return false;
     } else {
-      const indexOf = aux.indexOf(data);
-      favorites.splice(indexOf, 1);
-      setFavorites(aux);
-      setInList(false);
+      return auxIsAlreadyInMemo(data, reference);
     }
   };
+
+  const auxIsAlreadyInMemo = (data, list) => {
+    list = list.filter((item) => {
+      return data.id === item.id;
+    });
+    return list.length > 0;
+  };
+
+  useEffect(() => {
+    const loadSave = () => {
+      console.log("renderizei.");
+      isAlreadyInMemo(item) ? setInList(true) : setInList(false);
+    };
+    loadSave();
+  }, [setInList]);
 
   return (
     <section
@@ -58,8 +87,12 @@ export const FeaturedMovie = ({ item }) => {
                   handleAddFavorite(item);
                 }}
               >
-                { !inList && <span id="featured--add-button">+ Minha Lista</span>}
-                {inList && <span id="featured--add-button">- Remover da lista</span>}
+                {!inList && (
+                  <span id="featured--add-button">+ Minha Lista</span>
+                )}
+                {inList && (
+                  <span id="featured--add-button">- Remover da lista</span>
+                )}
               </a>
             </div>
             <div className="featured--genres">

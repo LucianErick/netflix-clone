@@ -1,7 +1,7 @@
 import "./styles.css";
 import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const MovieRow = ({ title, items }) => {
   
@@ -17,12 +17,16 @@ export const MovieRow = ({ title, items }) => {
 
   const handleNextPage = () => {
     let x = scrollX - Math.round(window.innerWidth / 2);
-    let totalWidth = items.results.length * 150;
+    let totalWidth = items.length * 150;
     if (window.innerWidth - totalWidth > x) {
       x = window.innerWidth - totalWidth - 50
     }
     setScrollX(x);
   };
+
+  useEffect(() => {
+
+  }, [items])
 
   return (
     <div className="movie-row">
@@ -36,10 +40,10 @@ export const MovieRow = ({ title, items }) => {
       <div className="movie-row--listarea">
         <div className="movie-row--list" style={{ 
           marginLeft: scrollX,
-          width: items.results.length * 150
+          width: items.length * 150
         }}>
-          {items.results.length > 0 &&
-            items.results.map((item, key) => {
+          {items.length > 0 &&
+            items.map((item, key) => {
               return (
                 <div className="movie-row--item" key={key}>
                   <img

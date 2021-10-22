@@ -4,6 +4,7 @@ import { Header } from "../../components/Header";
 import { FeaturedMovie } from "../../components/FeaturedMovie";
 import { MovieRow } from "../../components/MovieRow";
 import { useFavorites } from "../../contexts/FavoriteContext";
+import { Favorites } from "../../components/Favorites";
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
@@ -38,7 +39,6 @@ export default function Home() {
     return () => {
       window.removeEventListener("scroll", scrollListener);
     };
-
   }, [favorites]);
 
   return (
@@ -47,8 +47,11 @@ export default function Home() {
       {featuredData && <FeaturedMovie item={featuredData} />}
       <section className="lists">
         {movies.map((item, key) => {
-          return <MovieRow key={key} title={item.title} items={item.items} />;
+          return (
+            <MovieRow key={key} title={item.title} items={item.items.results} />
+          );
         })}
+        <Favorites />
       </section>
 
       {movies.lenght && (
