@@ -48,7 +48,7 @@ header {
     padding: 1.15rem 1.5rem;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(10, 10, 10, 0.95);
 }
 
 .header--settings span {

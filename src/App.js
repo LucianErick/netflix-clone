@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
 import Home from "./Pages/Home";
 import "./App.css";
+import "./fonts/fonts-styles.css";
+
 import FavoriteProvider from "./contexts/FavoriteContext";
 
 function App() {

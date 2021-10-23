@@ -3,98 +3,47 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body {
   background-color: #111;
-  color: #FFF;
+  color: #fff;
   font-size: 24px;
   font-family: "Netflix Sans Regular";
 }
 
-@font-face {
-  font-family: 'Netflix Sans Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Netflix Sans Regular'), url('./fonts/NetflixSansRegular.woff') format('woff');
-  }
-  
+.lists {
+  margin-top: -120px;
+}
 
-  @font-face {
-  font-family: 'Netflix Sans Icon';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Netflix Sans Icon'), url('./fonts/NetflixSansIcon.woff') format('woff');
-  }
-  
+body::-webkit-scrollbar {
+  width: 5px; /* width of the entire scrollbar */
+}
 
-  @font-face {
-  font-family: 'Netflix Sans Thin';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Netflix Sans Thin'), url('./fonts/NetflixSansThin.woff') format('woff');
-  }
-  
+body::-webkit-scrollbar-track {
+  background: #333; /* color of the tracking area */
+}
 
-  @font-face {
-  font-family: 'Netflix Sans Light';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Netflix Sans Light'), url('./fonts/NetflixSansLight.woff') format('woff');
-  }
-  
+body::-webkit-scrollbar-thumb {
+  background-color: blue; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #ccc; /* creates padding around scroll thumb */
+}
 
-  @font-face {
-  font-family: 'Netflix Sans Medium';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Netflix Sans Medium'), url('./fonts/NetflixSansMedium.woff') format('woff');
-  }
-  
-
-  @font-face {
-  font-family: 'Netflix Sans Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Netflix Sans Bold'), url('./fonts/NetflixSansBold.woff') format('woff');
-  }
-  
-
-  @font-face {
-  font-family: 'Netflix Sans Black';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Netflix Sans Black'), url('./fonts/NetflixSansBlack.woff') format('woff');
-  }
-
-  .lists {
-    margin-top: -120px;
-  }
-
-  body::-webkit-scrollbar {
-    width: 5px;               /* width of the entire scrollbar */
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: #333;        /* color of the tracking area */
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: blue;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid #ccc;  /* creates padding around scroll thumb */
-  }
-
-  .loading {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
+.loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
