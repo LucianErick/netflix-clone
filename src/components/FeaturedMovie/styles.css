@@ -122,6 +122,13 @@
   margin-right: 0.35rem;
 }
 
+.featured--name, .featured--description, .featured--genres {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
 @media (max-width: 768px) {
   .featured {
     height: 90vh;
