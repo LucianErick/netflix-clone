@@ -27,9 +27,54 @@ header {
 
 .header--user {
     height: 35px;
+    cursor: pointer;
+    transition: all ease 0.25s;
+}
+.header--user:hover {
+    opacity: 0.9;
 }
 
 .header--user img {
     height: 100%;
     border-radius: 4px;
+}
+
+.header--settings {
+    border-radius: 8px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 1rem;
+    padding: 1.15rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.header--settings span {
+    padding: 8px;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-family: "Netflix Sans Light";
+    letter-spacing: 0.05em;
+}
+
+.header--settings span:not(:first-child):hover {
+    background-color: #DB202C;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.header--settings span:first-child {
+    margin-bottom: 0.75rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #CCC;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+
+.header--settings span:last-child {
+    margin-bottom: 0;
 }

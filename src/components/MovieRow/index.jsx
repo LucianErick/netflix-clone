@@ -25,7 +25,6 @@ export const MovieRow = ({ title, items }) => {
   };
 
   useEffect(() => {
-
   }, [items])
 
   return (
